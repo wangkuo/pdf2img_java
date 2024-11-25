@@ -178,6 +178,11 @@ public class MainController {
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setTitle("错误");
             alert.setContentText(message);
+            
+            // 为 Alert 对话框应用相同的 CSS 样式
+            DialogPane dialogPane = alert.getDialogPane();
+            dialogPane.getStylesheets().add(getClass().getResource("/css/styles.css").toExternalForm());
+            
             alert.showAndWait();
         });
     }
