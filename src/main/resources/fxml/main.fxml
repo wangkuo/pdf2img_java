@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.image.ImageView?>
+
+<VBox spacing="10" alignment="CENTER" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.pdftools.MainController">
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="选择PDF文件" onAction="#handleSelectFiles"/>
+        <Button text="开始转换" onAction="#handleConvert"/>
+        <Button text="清除列表" onAction="#handleClear"/>
+    </HBox>
+
+    <ListView fx:id="fileListView" VBox.vgrow="ALWAYS"/>
+    
+    <ScrollPane fx:id="previewScrollPane" VBox.vgrow="ALWAYS">
+        <ImageView fx:id="previewImageView" preserveRatio="true" fitWidth="400"/>
+    </ScrollPane>
+
+    <ProgressBar fx:id="progressBar" progress="0.0" maxWidth="Infinity"/>
+    <Label fx:id="statusLabel" text="准备就绪"/>
+</VBox> 

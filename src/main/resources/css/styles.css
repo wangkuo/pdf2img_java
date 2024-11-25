@@ -1,0 +1,9 @@
+.root {
+    -fx-font-family: 
+        /* macOS 系统优先使用 PingFang SC */
+        "PingFang SC",
+        /* Windows 系统优先使用微软雅黑 */
+        "Microsoft YaHei",
+        /* 最后 fallback 到系统默认字体 */
+        system;
+} 
